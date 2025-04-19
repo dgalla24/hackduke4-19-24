@@ -163,24 +163,11 @@ export default function Home() {
       <header className="fixed top-0 left-0 right-0 bg-gradient-to-r from-rose-300 via-rose-400 to-rose-300 text-white py-3 z-10 shadow-lg">
         <div className="container max-w-5xl mx-auto flex items-center justify-center px-4">
           <div className="flex items-center gap-2 md:gap-3">
-            <div className="bg-white p-1.5 md:p-2 rounded-lg shadow-md">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-rose-400"
-              >
-                <path d="m8 16 2-6 2 6" />
-                <path d="M12 10v4" />
-                <rect width="16" height="16" x="4" y="4" rx="2" />
-              </svg>
-            </div>
+          <div className="bg-white rounded-md shadow-md w-8 h-8 overflow-hidden flex items-center justify-center">
+            <img src="/llama-logo.png" alt="LLaMAid Logo" className="w-full h-full object-contain" />
+          </div>
+
+
             <h1 className="text-lg md:text-xl lg:text-2xl font-bold tracking-tight text-gray-800">
               LLaMAid: Ambulance AI Copilot
             </h1>
