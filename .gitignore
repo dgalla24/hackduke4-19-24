@@ -1,0 +1,15 @@
+# .gitignore
+
+# Node
+**/node_modules/
+**/.next/
+**/.turbo/
+**/dist/
+
+# Python
+backend/venv/
+__pycache__/
+
+# System
+.DS_Store
+.env
