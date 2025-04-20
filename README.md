@@ -80,4 +80,4 @@ hackduke4-19-24/
 
 ## 🤝 Team
 
-Built by [Daniel Gallagher](https://github.com/dgalla24) and [Your Teammate’s Name Here] at HackDuke 2024.
+Built by [Daniel Gallagher](https://github.com/dgalla24) and [Jacob Cho](https://github.com/jacobc1327) at HackDuke 2025.
