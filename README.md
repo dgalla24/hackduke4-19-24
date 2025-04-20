@@ -1,24 +1,83 @@
-# hackduke4-19-24
 # 🚑 LLaMAid: Offline Ambulance AI Copilot
 
-An emergency-ready AI assistant that runs entirely offline for use inside ambulances or field ops. Built using:
+An emergency-ready AI assistant that runs **entirely offline**—designed for use in ambulances, field deployments, and disaster zones. Built during HackDuke 4/19/24 using:
 
-- 🧠 LLaMA 3 via Ollama (local LLM)
-- ⚙️ FastAPI (backend)
-- 🌐 Next.js + Tailwind CSS (frontend)
+- 🧠 [LLaMA 3](https://ollama.com/library/llama3) via [Ollama](https://ollama.com/) (local LLM)
+- ⚙️ FastAPI (Python backend)
+- 🌐 Next.js + Tailwind CSS (TypeScript frontend)
 
-## 🔧 How to Run
+---
 
-1. `ollama run llama3`
-2. `cd backend && source venv/bin/activate && uvicorn main:app --reload --port 8000`
-3. `cd frontend && npm run dev`
+## 🔧 How to Run Locally
 
-Then go to: [http://localhost:3000](http://localhost:3000)
+### 🧠 1. Start the LLaMA 3 model
 
-## 💡 Why Offline?
+Make sure [Ollama](https://ollama.com/) is installed and running:
 
-Critical EMS environments don’t always have Wi-Fi or cell coverage. We built this with a local-first AI model for:
-- Privacy
-- Speed
-- Reliability
+```bash
+ollama run llama3
+```
 
+---
+
+### 🔙 2. Backend Setup (FastAPI)
+
+```bash
+cd backend
+python3 -m venv venv              # only needed once
+source venv/bin/activate          # activate the environment
+pip install -r requirements.txt   # install dependencies
+uvicorn main:app --reload --port 8000
+```
+
+If `requirements.txt` is missing, use:
+
+```bash
+pip install fastapi uvicorn requests
+```
+
+---
+
+### 🌐 3. Frontend Setup (Next.js + Tailwind)
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Then open: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🧪 Features
+
+- 🎤 Voice input via browser microphone
+- 💬 Real-time AI-generated emergency response guidance
+- 📝 SBAR summary generator for structured handoffs
+- ⚡ Offline LLM inference using `ollama run llama3`
+- 🧠 Prompting optimized for EMT/paramedic context
+
+---
+
+## ❓ Why Offline?
+
+Critical EMS environments often lack Wi-Fi or reliable cellular coverage. LLaMAid was built to run **100% offline** so first responders can get fast, private, and reliable AI assistance during emergencies.
+
+---
+
+## 📁 File Structure
+
+```
+hackduke4-19-24/
+├── backend/          # FastAPI backend (local AI routing)
+├── frontend/         # Next.js frontend (UI logic)
+├── public/           # Static assets (e.g., logo image)
+└── README.md         # You’re here
+```
+
+---
+
+## 🤝 Team
+
+Built by [Daniel Gallagher](https://github.com/dgalla24) and [Your Teammate’s Name Here] at HackDuke 2024.
